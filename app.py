@@ -20,8 +20,8 @@ app = Flask(__name__)
 # Initialize speech recognizer
 recognizer = sr.Recognizer()
 
-# Initialize pyttsx3 TTS engine for macOS
-engine = pyttsx3.init(driverName='nsss')  # For macOS
+# Initialize TTS engine
+engine = pyttsx3.init()
 
 # Initialize Sentiment Analyzer
 sia = SentimentIntensityAnalyzer()
@@ -67,11 +67,6 @@ def analyze_sentiment(text):
         return 'negative'
     else:
         return 'neutral'
-
-# Function to make the chatbot speak
-def speak_response(response):
-    engine.say(response)
-    engine.runAndWait()
 
 @app.route('/')
 def index():
@@ -127,9 +122,6 @@ def get_response():
                     response = "I found the page, but couldn't extract relevant information."
             else:
                 response = "Hmm, I couldn't find any information on that topic. Could you please ask something else?"
-
-    # Make the bot speak the response
-    speak_response(response)
 
     return jsonify({'response': response, 'redirect_after': redirect_after})
 
