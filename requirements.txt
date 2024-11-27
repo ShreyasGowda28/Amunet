@@ -6,6 +6,7 @@ werkzeug==2.1.2
 requests==2.24.0
 beautifulsoup4==4.9.1
 googlesearch-python==1.0.0
+gTTS==2.3.1
 
 
 
