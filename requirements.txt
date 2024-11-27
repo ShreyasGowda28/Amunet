@@ -5,6 +5,7 @@ pyttsx3==2.90
 beautifulsoup4==4.11.1
 requests==2.27.1
 werkzeug==2.1.2
+googlesearch-python==1.0.0
 
 
 
