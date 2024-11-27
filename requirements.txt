@@ -7,8 +7,9 @@ requests
 beautifulsoup4==4.9.1
 googlesearch-python
 gTTS
-
-
+# Include instructions to install espeak-ng as a system package:
+# On Ubuntu: sudo apt-get install espeak
+# On macOS: brew install espeak
 
 
 
